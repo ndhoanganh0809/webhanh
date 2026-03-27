@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Cá Nhân</title>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --bg-color: #f8fafc;
+            --text-color: #1e293b;
+            --card-bg: #ffffff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        nav {
+            background-color: var(--card-bg);
+            padding: 1rem 5%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav h1 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        #hero {
+            text-align: center;
+            padding-top: 6rem;
+        }
+
+        #hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        #hero p {
+            font-size: 1.1rem;
+            color: #64748b;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        /* Các Section */
+        section {
+            margin-bottom: 4rem;
+        }
+
+        section h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid var(--primary-color);
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+
+        /* Grid cho Kỹ năng và Dự án */
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: var(--card-bg);
+            margin-top: 2rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <h1>MyPortfolio</h1>
+        <ul>
+            <li><a href="#about">Giới thiệu</a></li>
+            <li><a href="#skills">Kỹ năng</a></li>
+            <li><a href="#projects">Dự án</a></li>
+            <li><a href="#contact">Liên hệ</a></li>
+        </ul>
+    </nav>
+
+    <header id="hero" class="container">
+        <h2>Xin chào, tôi là Nguyễn Đỗ Hoàng Anh<h2>
+        <p>Đam mê Kỹ thuật Phần mềm và Mạng máy tính.</p>
+    </header>
+
+    <main class="container">
+        
+        <section id="about">
+            <h3>Về bản thân</h3>
+            <p>Tôi hiện đang là sinh viên tại Đại học Văn Hiến.Ngành Khoa Học Máy Tính</p>
+        </section>
+
+        <section id="skills">
+            <h3>Kỹ năng nổi bật</h3>
+            <div class="grid-layout">
+                <div class="card">
+                    <h4>Ngôn ngữ & Web</h4>
+                    <p>Thành thạo C++. Có khả năng xây dựng giao diện với Semantic HTML5 và CSS3.</p>
+                </div>
+                <div class="card">
+                    <h4>Kỹ thuật phần mềm</h4>
+                    <p>Nắm vững quy trình phân tích và thiết kế hệ thống (UML, Use Case Diagram, Class Diagram).</p>
+                </div>
+                <div class="card">
+                    <h4>Mạng & Công cụ</h4>
+                    <p>Thiết lập mạng với Cisco Packet Tracer. Quản lý mã nguồn dự án hiệu quả qua hệ thống Git/GitHub.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h3>Dự án tiêu biểu</h3>
+            <div class="grid-layout">
+                <div class="card">
+                    <h4>Dự án Lập trình Web Nhóm</h4>
+                    <p><strong>Vai trò:</strong> Trưởng nhóm (Team Leader)</p>
+                    <p><strong>Quy mô:</strong> 7 thành viên</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h3>Liên hệ</h3>
+            <p>Nếu bạn muốn trao đổi thêm về các dự án công nghệ hoặc đơn giản là cùng giao lưu, hãy liên hệ với tôi qua:</p>
+            <br>
+            <p>📧 Email: nguyendohoanganh080919@gmail.com</p>
+        </section>
+
+    </main>
+
+</body>
+</html>
